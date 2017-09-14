@@ -1,0 +1,1130 @@
+                                                                                                                                         <!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAcFWVRAAAYDUVhR"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+        <title>    Find the right doctor for you and book appointment online | Practo</title>
+        <meta name="description" content="    Find Doctors in Bangalore, Mumbai, Delhi, Chennai, Pune, Kolkata and Hyderabad in India and Singapore. Book confirmed doctor appointments online for FREE. Practo"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#08b">
+        <meta name="google" value="notranslate">
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+                    <link rel="stylesheet" href="/css/2d42908-e2d954d.css" title="fabric stylesheets"/>
+        
+        
+        
+        
+        <link rel="stylesheet" href="/css/f86fe85-a3e4081.css" /
+    >    
+        <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Practo",
+      "url" : "https://www.practo.com",
+      "logo": "https://www.practo.com/bundles/practopractoapp/images/logos/practo_logo.svg",
+      "sameAs" : [
+        "https://www.youtube.com/user/PractoSupport",
+        "https://www.facebook.com/practo",
+        "https://twitter.com/Practo"
+      ]
+    }
+    </script>
+
+     <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/css/8c69803-cd51828.css"/>
+        <style>
+            .home-title{
+                margin-top: 100px;
+            }
+            .home-search{
+                margin-bottom: 150px !important;
+            }
+    </style>
+    <![endif]-->
+
+    <style>
+        .showifnojs{
+            display:none;
+        }
+        form.home-search select[name='locality'] > option[default]{
+            content : "MRC Nagar";
+        }
+    </style>
+
+
+
+        <script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    window.addEventListener('load', function(){
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+    });
+  }
+  _fbq.push(['addPixelId', '327052174165071']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=327052174165071&amp;ev=PixelInitialized" /></noscript>
+        <!-- Begin comScore Tag -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "19226225" });
+
+(function(){
+	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    window.addEventListener('load',function(){
+    	el.parentNode.insertBefore(s, el);
+	});
+})();
+
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=19226225&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->        <script type="text/javascript">
+(function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script');
+    pa.type = 'text/javascript';
+    pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/54f452bb60135a1696000084.js";
+    var s = document.getElementsByTagName('script')[0];
+    window.addEventListener('load',function(){
+    	s.parentNode.insertBefore(pa, s);
+	});
+})();
+
+var adroll_adv_id = "JIBANMR3RBERDOJXDB7RJQ";
+var adroll_pix_id = "KQZDACNMJVCFRKD6ZDWWNV";
+var __adroll_loaded;
+(function() {
+    var oldonload = window.onload;
+    window.onload = function() {
+        __adroll_loaded = true;
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+            document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        if (oldonload) {
+            oldonload();
+        }
+    };
+}());
+</script>
+
+<script type="text/javascript">
+_bizo_data_partner_id = "7652";
+</script>
+<script type="text/javascript">
+    window.addEventListener('load',function(){
+        (function() {
+        var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";
+        b.async = true;
+        b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+        s.parentNode.insertBefore(b, s);
+        })();
+    });
+</script>
+<noscript>
+    <img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=7652&fmt=gif" />
+</noscript>    </head>
+
+    <body class="body-bg" data-ana="PageView:pageView" >
+
+    <div id="absNoticeBar" class="notice-bar font-normal page-body-container"></div>
+
+    <div id="clinicSyncNotificationBar" class="notice-bar font-normal page-body-container"></div>
+    <div class="page-wrapper">
+                <div class="header-bg">
+            <div class="fabric-header-container">
+                <div class="fabric-header-left-container">
+                    <div class="fabric-header-logo-block">
+                        <a   href="/"  style="float: left;">
+                            <img src="/bundles/practopractoapp/images/logos/practo_logo.svg" onerror="this.src='/bundles/practopractoapp/images/logos/practo_logo.png'" alt="Practo - Book Doctor Appointments Online"/>
+                        </a>
+                        <div class="fabric-header-getapp-block">
+                                                       <a class="fabric-header-getapp-link" href=http://go.onelink.me/1025359428?pid=mobileweb&amp;c=buttonnearlogo target="_blank" rel="nofollow">
+                                <div class='phone-icon'>
+                                    <i class="practo-icon icon-mobile">&#xe80a;</i>
+                                </div>
+                                <span>
+                                    Get Practo App                                    <label>Download app from play store</label>
+                                </span>
+                           </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fabric-header-right-wrapper">
+                    <div class="fabric-header-right-container">
+                        <div class="fabric-header-login-block">
+                                                                                                                                                                
+    
+            <a class="nav-signup-link homeSignupLink nav-link" href="https://accounts.practo.com/signup?intent=fabric" rel="nofollow">Register</a>
+        <a class="nav-login-link homeLoginLink nav-link" data-origin="Home Page" href="/health/login" rel="nofollow">Log in</a>
+                <a class="what-is-this-service-link nav-link" target="_blank" href="/for-doctors">Practo for Doctors</a>
+
+        <a class="nav-login-link consult-navbar-link homeLoginLink nav-link hide"  href="https://consult.practo.com" rel="nofollow">Consult </a>
+
+    
+    <a href="javascript:void(0);" id="consult-city" data-consult-city="Chennai" class="city-dropdown-activator flag-india nav-link">
+        Chennai
+    </a>
+
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+                        
+    
+            <noscript>
+            <style>
+                .hideifnojs{
+                    display:none;
+                }
+                #home_search_container{
+                    padding-top: 20px;
+                }
+                #home_container{
+                    display:block;
+                }
+            </style>
+        </noscript>
+
+        
+        <div id="consult-parent" class="hide">
+            <div id="consult-banner">
+                <a href="https://consult.practo.com">
+                <div class="ribbon-wrapper-green">
+                    <div class="ribbon-green"> NEW</div>
+                </div>
+                <br>
+                    <div class="consult-bubble">
+                        <img class="img-responsive chat" src="bundles/practopractoapp/images/chatbubble.png">
+                    </div>
+
+                    <div class="consult-link">
+                        <img class="consult-logo" src="bundles/practopractoapp/images/logos/consultlogo.png">
+                        <div class="ask-question">
+                            <div type="button"class=" bannerbtn">ASK FREE QUESTION</div>
+
+                        </div>
+                        <span class=""><img class="cross" id="cross" src="bundles/practopractoapp/images/consultcross.png"></span>
+                        <div class="tagline">
+                            <p style="font-size: 12px;">Unanswered Health Questions Answered by Doctors</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+            <script type="text/javascript">
+            var checkTime = localStorage.getItem("shutConsultBanner");
+                if(checkTime)
+                {
+                    if( (Date.now() - checkTime ) / (86400000) <= 1) // For 1 day
+                    {
+                        document.getElementById('consult-parent').style.display = 'none';
+                    }
+                    else
+                    {
+                        document.getElementById('consult-parent').style.display = 'block';
+                    }
+                }
+                else
+                {
+                    document.getElementById('consult-parent').style.display = 'block';
+                }
+
+
+            </script>
+        </div>
+
+                                                    <div id="home-container" class='home-page-container'>
+
+            <div class="page-body-container" style="position:relative;" id="home-search-container">
+                <div class="header-container">
+                   <p class="new-header">Find and Book </p>
+                </div>
+                <form class="home-search searchForm halfwidth" id="home_search" action="/" method="GET">
+                    <input name="city" type="hidden" value="chennai"/>
+                    <input name="searchfor" value="specialization" type="hidden"/>
+                    <div class="home-search-container">
+                            <noscript>
+                                <input type="hidden" value="true" name="values_in_form"/>
+                            </noscript>
+                            <div id="locationContainer" class="location-container">
+                                <div class="pin_icon">
+                                    <i class="practo-icon icon-pin">&#xe801;</i>
+                                </div>
+                                <span class="location-placeholder ">
+                                    Chennai
+                                </span>
+                                <input name="locality" class=" location-hide  location-input" id = "locationInput" type="text" placeholder="Locality" autocomplete="off"/>
+                            </div>
+                            <div class="keywords-container" id="keywordsContainer">
+                                <div class="search_grey">
+                                    <i class="practo-icon icon-search">&#xe808;</i>
+                                </div>
+                                                                                                                                                                                                                                    <input name="q" type="text" id="keywordsInput" class="keywords-input" placeholder="Specialities, Doctors, Clinics, Labs etc" value="" autocomplete="off"/>
+                            </div>
+                            <div class="search-button-wrapper">
+                                <button class="search-button">
+                                    <i class="search-icon">
+                                    </i>
+                                </button>
+                            </div>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+                <a id="OmniSubmitGa" data-ana="PractoListingSearchButton:Search" href="#"></a>
+                <div class="searchResultsLoader">
+                    <p class="loader-text">Loading Results</p>
+                    <p class="gif-holder">Loading...</p>
+                </div>
+                <div id="icons">
+                </div>
+                
+                <script id="tabsTemplate" type="text/template">
+                    <% var countryName = searchvars.cityCountry[city.toLowerCase()];
+                    if (countryName == "india") { %>
+                        <section>
+                            <div class="tabs lineslide">
+                                <nav>
+                                    <ul>
+                                        <div class="profile-nav-tab-marker"></div>
+                                        <li id ="doctorTab" class="tab-current"><a href="#doctor-tab"><i class="doctor-icon"></i><br><span class="middle">Doctors</span></a></li>
+                                        <% if (_.contains(practice_types, 'diagnostic')) { %>
+                                            <li><a href="#diagnostic-tab"><i class="diagnostic-icon"></i><span >Diagnostic<br>Labs</span></a></li>
+                                        <% } %>
+                                        <% if ((_.contains(practice_types, 'spa')) || (_.contains(practice_types, 'salon'))) { %>
+                                            <li><a href="#wellness-tab"><i class="wellness-icon"></i><span>Spas &<br>Salons</span></a></li>
+                                        <% } %>
+                                        <% if ((_.contains(practice_types, 'yoga')) || (_.contains(practice_types, 'gym'))) { %>
+                                            <li><a href="#fitness-tab"><i class="fitness-icon"></i><br><span class="middle">Fitness</span></a></li>
+                                        <% } %>
+                                    </ul>
+                                </nav>
+                                
+                                <hr class='nomargin'>
+                                <div class="content-wrap">
+                                    <section id="doctor-tab">
+                                        <div class="tests-container">
+                                                                                                                                         <a href="https://www.practo.com/chennai/dentist" data-speciality='dentist' class="speciality-icons">
+                                                   <i class="dentist-icon"></i>
+                                                   <p class="test-name">Dentist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/ophthalmologist" data-speciality='ophthalmologist' class="speciality-icons">
+                                                   <i class="ophthalmologist-icon"></i>
+                                                   <p class="test-name">Ophthalmologist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/dermatologist-cosmetologist" data-speciality='dermatologist-cosmetologist' class="speciality-icons">
+                                                   <i class="dermatologist-cosmetologist-icon"></i>
+                                                   <p class="test-name">Dermatologist/Cosmetologist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/homeopath" data-speciality='homeopath' class="speciality-icons">
+                                                   <i class="homeopath-icon"></i>
+                                                   <p class="test-name">Homeopath</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/ayurveda" data-speciality='ayurveda' class="speciality-icons">
+                                                   <i class="ayurveda-icon"></i>
+                                                   <p class="test-name">Ayurveda</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/cardiologist" data-speciality='cardiologist' class="speciality-icons">
+                                                   <i class="cardiologist-icon"></i>
+                                                   <p class="test-name">Cardiologist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/gastroenterologist" data-speciality='gastroenterologist' class="speciality-icons">
+                                                   <i class="gastroenterologist-icon"></i>
+                                                   <p class="test-name">Gastroenterologist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/psychiatrist" data-speciality='psychiatrist' class="speciality-icons">
+                                                   <i class="psychiatrist-icon"></i>
+                                                   <p class="test-name">Psychiatrist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/ear-nose-throat-ENT-specialist" data-speciality='ear-nose-throat-ENT-specialist' class="speciality-icons">
+                                                   <i class="ear-nose-throat-ENT-specialist-icon"></i>
+                                                   <p class="test-name">Ear-Nose-Throat (ENT)</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/gynecologist-obstetrician" data-speciality='gynecologist-obstetrician' class="speciality-icons">
+                                                   <i class="gynecologist-obstetrician-icon"></i>
+                                                   <p class="test-name">Gynecologist/Obstetrician</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/neurologist" data-speciality='neurologist' class="speciality-icons">
+                                                   <i class="neurologist-icon"></i>
+                                                   <p class="test-name">Neurologist</p>
+                                               </a>
+                                                                                                                                         <a href="https://www.practo.com/chennai/urologist" data-speciality='urologist' class="speciality-icons">
+                                                   <i class="urologist-icon"></i>
+                                                   <p class="test-name">Urologist</p>
+                                               </a>
+                                                                                      <div class="clear"></div>
+                                        </div>
+                                    </section>
+                                    
+                                    <% if (_.contains(practice_types, 'diagnostic')) { %>
+                                    
+                                        <section id="diagnostic-tab">
+                                            <div class="tests-container">
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/tests" data-test='tests' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="tests-icon"></i>
+                                                       <p class="test-name">All Labs</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/thyroid-profile" data-test='thyroid-profile' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="thyroid-profile-icon"></i>
+                                                       <p class="test-name">Thyroid Profile</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/lipid-profile" data-test='lipid-profile' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="lipid-profile-icon"></i>
+                                                       <p class="test-name">Lipid Profile</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/complete-blood-count" data-test='complete-blood-count' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="complete-blood-count-icon"></i>
+                                                       <p class="test-name">Complete Blood Count</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/x-ray" data-test='x-ray' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="x-ray-icon"></i>
+                                                       <p class="test-name">X-ray</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/hiv-1-2" data-test='hiv-1-2' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="hiv-1-2-icon"></i>
+                                                       <p class="test-name">HIV 1 &amp; 2</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/pregnancy-test" data-test='pregnancy-test' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="pregnancy-test-icon"></i>
+                                                       <p class="test-name">Pregnancy Test</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/urine-culture-and-sensitivity" data-test='urine-culture-and-sensitivity' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="urine-culture-and-sensitivity-icon"></i>
+                                                       <p class="test-name">Urine Culture and Sensitivity</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/stool-routine" data-test='stool-routine' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="stool-routine-icon"></i>
+                                                       <p class="test-name">Stool Routine</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/ct-scan" data-test='ct-scan' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="ct-scan-icon"></i>
+                                                       <p class="test-name">CT Scan</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/semen-analysis" data-test='semen-analysis' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="semen-analysis-icon"></i>
+                                                       <p class="test-name">Semen Analysis</p>
+                                                   </a>
+                                                                                                                                                     <a href="https://www.practo.com/chennai/diagnostics/mri-scan" data-test='mri-scan' class="test-icon" data-segment = "diagnostics">
+                                                       <i class="mri-scan-icon"></i>
+                                                       <p class="test-name">MRI Scan</p>
+                                                   </a>
+                                                                                              <div class="clear"></div>
+                                            </div>
+                                        </section>
+                                    
+                                    <% } %>
+                                    <% if ((_.contains(practice_types, 'spa')) || (_.contains(practice_types, 'salon'))) { %>
+                                    
+                                        <section id="wellness-tab">
+                                            <div class="tests-container">
+                                                                                                <a href="https://www.practo.com/chennai/wellness-centers/all?filters%5Bpractice_types%5D%5B%5D=spa" data-test='all?filters[practice_types][]=spa' class="wellness-icons" data-segment = "wellness-centers">
+                                                   <i class="spa-icon"></i>
+                                                   <p class="test-name">Spa</p>
+                                                </a>
+                                                                                                <a href="https://www.practo.com/chennai/wellness-centers/all?filters%5Bpractice_types%5D%5B%5D=salon" data-test='all?filters[practice_types][]=salon' class="wellness-icons" data-segment = "wellness-centers">
+                                                   <i class="salon-icon"></i>
+                                                   <p class="test-name">Salon</p>
+                                                 </a>
+                                                                                                                                                       <a href="https://www.practo.com/chennai/wellness-centers/hair-cut" data-test='hair-cut' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="hair-cut-icon"></i>
+                                                       <p class="test-name">Haircut</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/waxing" data-test='waxing' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="waxing-icon"></i>
+                                                       <p class="test-name">Waxing</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/shaving" data-test='shaving' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="shaving-icon"></i>
+                                                       <p class="test-name">Beard</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/body-massage" data-test='body-massage' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="body-massage-icon"></i>
+                                                       <p class="test-name">Body Massage</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/facial" data-test='facial' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="facial-icon"></i>
+                                                       <p class="test-name">Facial</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/manicure" data-test='manicure' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="manicure-icon"></i>
+                                                       <p class="test-name">Manicure</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/pedicure" data-test='pedicure' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="pedicure-icon"></i>
+                                                       <p class="test-name">Pedicure</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/threading" data-test='threading' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="threading-icon"></i>
+                                                       <p class="test-name">Threading</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/bleaching" data-test='bleaching' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="bleaching-icon"></i>
+                                                       <p class="test-name">Bleaching</p>
+                                                   </a>
+                                                                                                                                                        <a href="https://www.practo.com/chennai/wellness-centers/make-up" data-test='make-up' class="wellness-icons" data-segment = "wellness-centers">
+                                                       <i class="make-up-icon"></i>
+                                                       <p class="test-name">Make-up</p>
+                                                   </a>
+                                                                                                  <div class="clear"></div>
+                                            </div>
+                                        </section>
+                                    
+                                    <% } %>
+                                    <% if ((_.contains(practice_types, 'yoga')) || (_.contains(practice_types, 'gym'))) { %>
+                                
+                                    <section id="fitness-tab">
+                                        <div class="tests-container">
+                                                                                        <a href="https://www.practo.com/chennai/fitness-centers/all?filters%5Bpractice_types%5D%5B%5D=gym" data-test='all?filters[practice_types][]=gym' class="fitness-icons" data-segment = "fitness-centers">
+                                               <i class="gyms-icon"></i>
+                                               <p class="test-name">Gyms</p>
+                                           </a>
+                                                                                        <a href="https://www.practo.com/chennai/fitness-centers/all?filters%5Bpractice_types%5D%5B%5D=yoga" data-test='all?filters[practice_types][]=yoga' class="fitness-icons" data-segment = "fitness-centers">
+                                               <i class="yoga-centres-icon"></i>
+                                               <p class="test-name">Yoga Centres</p>
+                                           </a>
+                                                                                                                                                  <span class="fitness-icons">
+                                                     <i class="aerobics-icon"></i>
+                                                     <p class="test-name disabled">Aerobics</p>
+                                                     <p class="test-name disabled">Coming Soon</p>
+                                                    </span>
+                                                                                                                                                                                                         <span class="fitness-icons">
+                                                     <i class="pilates-icon"></i>
+                                                     <p class="test-name disabled">Pilates</p>
+                                                     <p class="test-name disabled">Coming Soon</p>
+                                                    </span>
+                                                                                                                                                                                                         <span class="fitness-icons">
+                                                     <i class="zumba-icon"></i>
+                                                     <p class="test-name disabled">Zumba</p>
+                                                     <p class="test-name disabled">Coming Soon</p>
+                                                    </span>
+                                                                                                                                                 <div class="clear"></div>
+                                            </div>
+                                        </section>
+                                    
+                                    <% } %>
+                                </div>
+                            </div>
+                        </section>
+                    <% } %>
+                </script>
+                
+                                    <div class="for-doctors">
+                        <a href="/for-doctors" class="for-doctors-link">
+                            <span>Are you a doctor?</span>
+                            <label>Contact Practo for a Free Demo</label>
+                        </a>
+                    </div>
+                            </div>
+        </div>
+    
+    <div class="city-dropdown">
+                    <div class="city-dropdown-country-container">
+            <div class="city-dropdown-country-head flag-india-small">INDIA</div>
+            <div class="city-dropdown-top-cities-container">
+                                                            <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="bangalore" data-country="india" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Bangalore
+                    </a>
+                                                                            <a href="javascript:void(0);" data-slug="chennai" data-country="india" class="city-dropdown-option city-dropdown-top-city-beta">
+                        Chennai
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                                                <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="delhi" data-country="india" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Delhi
+                    </a>
+                                                                            <a href="javascript:void(0);" data-slug="hyderabad" data-country="india" class="city-dropdown-option city-dropdown-top-city-beta">
+                        Hyderabad
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                                                <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="kolkata" data-country="india" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Kolkata
+                    </a>
+                                                                            <a href="javascript:void(0);" data-slug="mumbai" data-country="india" class="city-dropdown-option city-dropdown-top-city-beta">
+                        Mumbai
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                                                <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="pune" data-country="india" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Pune
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                    <div class="clear"></div>
+            </div>
+                            <div class="other-city-search-activator">
+                    <a href="javascript:void(0);" class="link">Other Cities</a>
+                </div>
+                <div class="other-city-container">
+                    <div class="other-city-input-box">
+                        <input type="text" name="other-city" data-country="India"/>
+                        <a href="javascript:void(0);" class="close-other-city">CANCEL</a>
+                    </div>
+                    <div class="other-city-list">
+                                                                                    <a href="javascript:void(0);" data-slug="agra" data-country="india" class="city-dropdown-option city-dropdown-city">Agra</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="ahmedabad" data-country="india" class="city-dropdown-option city-dropdown-city">Ahmedabad</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="aurangabad" data-country="india" class="city-dropdown-option city-dropdown-city">Aurangabad</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="bhopal" data-country="india" class="city-dropdown-option city-dropdown-city">Bhopal</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="chandigarh" data-country="india" class="city-dropdown-option city-dropdown-city">Chandigarh</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="coimbatore" data-country="india" class="city-dropdown-option city-dropdown-city">Coimbatore</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="ernakulam" data-country="india" class="city-dropdown-option city-dropdown-city">Ernakulam</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="faridabad" data-country="india" class="city-dropdown-option city-dropdown-city">Faridabad</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="ghaziabad" data-country="india" class="city-dropdown-option city-dropdown-city">Ghaziabad</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="gurgaon" data-country="india" class="city-dropdown-option city-dropdown-city">Gurgaon</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="indore" data-country="india" class="city-dropdown-option city-dropdown-city">Indore</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="jaipur" data-country="india" class="city-dropdown-option city-dropdown-city">Jaipur</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="lucknow" data-country="india" class="city-dropdown-option city-dropdown-city">Lucknow</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="ludhiana" data-country="india" class="city-dropdown-option city-dropdown-city">Ludhiana</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="meerut" data-country="india" class="city-dropdown-option city-dropdown-city">Meerut</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="mohali" data-country="india" class="city-dropdown-option city-dropdown-city">Mohali</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="nagpur" data-country="india" class="city-dropdown-option city-dropdown-city">Nagpur</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="nashik" data-country="india" class="city-dropdown-option city-dropdown-city">Nashik</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="navi-mumbai" data-country="india" class="city-dropdown-option city-dropdown-city">Navi Mumbai</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="noida" data-country="india" class="city-dropdown-option city-dropdown-city">Noida</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="panchkula" data-country="india" class="city-dropdown-option city-dropdown-city">Panchkula</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="puducherry" data-country="india" class="city-dropdown-option city-dropdown-city">Puducherry</a>
+                                                                                                                                                                    <a href="javascript:void(0);" data-slug="raipur" data-country="india" class="city-dropdown-option city-dropdown-city">Raipur</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="surat" data-country="india" class="city-dropdown-option city-dropdown-city">Surat</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="thane" data-country="india" class="city-dropdown-option city-dropdown-city">Thane</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="thiruvananthapuram" data-country="india" class="city-dropdown-option city-dropdown-city">Thiruvananthapuram</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="vadodara" data-country="india" class="city-dropdown-option city-dropdown-city">Vadodara</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="varanasi" data-country="india" class="city-dropdown-option city-dropdown-city">Varanasi</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="vijayawada" data-country="india" class="city-dropdown-option city-dropdown-city">Vijayawada</a>
+                                                                                                                <a href="javascript:void(0);" data-slug="visakhapatnam" data-country="india" class="city-dropdown-option city-dropdown-city">Visakhapatnam</a>
+                                                                        </div>
+                </div>
+                    </div>
+                        <div class="city-dropdown-country-seperator"></div>
+                <div class="city-dropdown-country-container">
+            <div class="city-dropdown-country-head flag-singapore-small">SINGAPORE</div>
+            <div class="city-dropdown-top-cities-container">
+                                                            <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="singapore" data-country="singapore" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Singapore
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                    <div class="clear"></div>
+            </div>
+                    </div>
+                        <div class="city-dropdown-country-seperator"></div>
+                <div class="city-dropdown-country-container">
+            <div class="city-dropdown-country-head flag-philippines-small">PHILIPPINES</div>
+            <div class="city-dropdown-top-cities-container">
+                                                            <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="batangas" data-country="philippines" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Batangas
+                    </a>
+                                                                            <a href="javascript:void(0);" data-slug="metro-manila" data-country="philippines" class="city-dropdown-option city-dropdown-top-city-beta">
+                        Metro Manila
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                    <div class="clear"></div>
+            </div>
+                    </div>
+                        <div class="city-dropdown-country-seperator"></div>
+                <div class="city-dropdown-country-container">
+            <div class="city-dropdown-country-head flag-indonesia-small">INDONESIA</div>
+            <div class="city-dropdown-top-cities-container">
+                                                            <div class="city-dropdown-top-city-row">
+                                        <a href="javascript:void(0);" data-slug="jakarta" data-country="indonesia" class="city-dropdown-option city-dropdown-top-city-alpha">
+                        Jakarta
+                    </a>
+                                            <div class="clear"></div>
+                        </div>
+                                                    <div class="clear"></div>
+            </div>
+                    </div>
+                <input id="ana-record" type="hidden" value= "{&quot;pageView&quot;:{&quot;events&quot;:{&quot;Page Name&quot;:&quot;Home&quot;},&quot;increment&quot;:&quot;Total Home Page Views&quot;,&quot;people&quot;:{&quot;User Location City&quot;:&quot;chennai&quot;,&quot;Home Page Viewed On&quot;:&quot;2015-10-19 04:19:34&quot;}}}" />
+        </div>
+    <footer>
+    <div class="footer-content">
+        <div class="links">
+            <a class="foot-link" href="/company/about">About</a>
+            <a class="foot-link" href="/company/careers">Careers</a>
+            <a class="foot-link" href="/company/press">Press</a>
+            <a class="foot-link" href="http://blog.practo.com" target="_blank">Blog</a>
+            <a class="foot-link" href="/company/contact">Contact Us</a>
+            <a class="foot-link" href="/company/terms" rel="nofollow">Privacy & Terms</a>
+        </div>
+        <div class="pre-social u-cf"></div>
+        <div class="social">
+            <a class="foot-link" href="https://www.facebook.com/practo" target="_blank" rel="nofollow">Facebook</a>
+            <a class="foot-link" href="https://twitter.com/Practo" target="_blank" rel="nofollow">Twitter</a>
+            <a class="foot-link" href="https://www.youtube.com/user/PractoSupport" target="_blank" rel="nofollow">Youtube</a>
+        </div>
+        <div class="u-cf"></div>
+        <div class="copyright">
+            Copyright &copy; 2015 Practo Technologies Private Limited. All rights reserved.
+        </div>
+    </div>
+</footer>
+         </div>
+
+    <div class="clear"></div>
+    
+<script type="text/javascript">
+    var practo = practo || {};
+    practo.ray_host = "https:\/\/ray.practo.com";
+    practo.accounts_host = "https:\/\/accounts.practo.com";
+    practo.fabric_host = "https:\/\/www.practo.com";
+    practo.epicenter_host = "https:\/\/epicenter.practo.com";
+    practo.fabric_socket_host = "https:\/\/fabric-socket.practo.com";
+    practo.accounts_host = "https:\/\/accounts.practo.com";
+    practo.fabric_sixpack_host = "https:\/\/fabric-sixpack.practo.com";
+</script>
+
+    <script>
+    var gadimensions = {};
+    
+    gadimensions.dimension4 = 'organic';
+    
+    if (typeof Storage !== "undefined") {
+        if (typeof sessionStorage.getItem("practo_ad_referral") !== "undefined" && sessionStorage.getItem("practo_ad_referral") != null) {
+            temp = JSON.parse(sessionStorage.getItem("practo_ad_referral"));
+            sessionStorage.removeItem("practo_ad_referral");
+            gadimensions.dimension1 = temp.dimension1;
+            gadimensions.dimension3 = temp.dimension3;
+            gadimensions.dimension12 = temp.dimension12;
+            gadimensions.dimension13 = temp.dimension13;
+            gadimensions.dimension14 = temp.dimension14;
+        }
+    }
+    
+            gadimensions.dimension5 = "Chennai";
+                    gadimensions.dimension6 = null;
+            gadimensions.dimension7 = null;
+                        if (typeof Storage !== "undefined") {
+        if (typeof sessionStorage.getItem("practo_ga_track_keyword") !== "undefined" && sessionStorage.getItem("practo_ga_track_keyword") != null) {
+            gadimensions.dimension15 = sessionStorage.getItem("practo_ga_track_keyword");
+        }
+    }
+</script>
+    <script>
+  window.locale = '';
+  var practo = practo||{};
+  practo.omnisearch = {};
+  practo.omnisearch.doctorLabel = 'Doctors named';
+  practo.omnisearch.clinicLabel = 'Clinics named';
+  practo.omnisearch.labLabel = 'Labs named';
+  practo.omnisearch.currentLocation = ['Current location'];
+  practo.omnisearch.wellnessLabel = 'Wellness Centres named';
+  practo.omnisearch.fitnessLabel = 'Fitness Centres named';
+  practo.omnisearch.gettingLocationPlaceholder = 'Getting location...'
+  practo.omnisearch.translations = {
+  'locality': 'locality',
+  'city': 'city',
+  'landmark': 'landmark',
+  'speciality': 'speciality',
+  'clinic speciality': 'clinic speciality',
+  'symptom': 'symptom',
+  'service': 'service',
+  'test': 'test',
+  'doctor': 'doctor',
+  'clinic': 'clinic',
+  'Dentist': "Dentist",
+  'Gynecologist/obstetrician': "Gynecologist/obstetrician",
+  'Dermatologist/cosmetologist': "Dermatologist/cosmetologist",
+  'Pediatrician': "Pediatrician",
+  'General Physician': "General Physician",
+  'Dermatologist/cosmetologist': "Dermatologist/Cosmetologist",
+  'Ear-nose-throat (ent) Specialist': "Ear-nose-throat (ent) Specialist",
+  'Homeopath': "Homeopath",
+  'Ayurveda': "Ayurveda",
+  'Thyroid Profile': 'Thyroid Profile',
+  'Lipid Profile': 'Lipid Profile',
+  'Complete Blood Count': 'Complete Blood Count'
+  }
+  practo.omnisearch.topSpecializations = [
+    "Dentist",
+    "Gynecologist/obstetrician",
+    "General Physician",
+    "Dermatologist/cosmetologist",
+    "Ear-nose-throat (ent) Specialist",
+    "Homeopath",
+    "Ayurveda"
+  ];
+  practo.omnisearch.topSpecializationsType = 'speciality';
+
+  practo.omnisearch.topTests = ["Thyroid Profile", "Lipid Profile", "Complete Blood Count"];
+  practo.omnisearch.topTestsType = 'test';
+
+  practo.omnisearch.headerWordsKeyValueMap = {
+    "clinic": "Clinics",
+    "doctor": "Doctors",
+    "diagnostic": "Diagnostic Labs",
+    "spa": "Spas and Salons",
+    "salon": "Spas and Salons",
+    "gym": "Gyms and Yoga Centres",
+    "yoga": "Gyms and Yoga Centres"
+  };
+
+  practo.omnisearch.placeholderDoctor = 'Specialities, Doctors, Clinics';
+  practo.omnisearch.placeholderLabs = 'Labs';
+  practo.omnisearch.placeholderWellness = 'Spas and Salons';
+  practo.omnisearch.placeholderFitness = 'Gyms and Yoga Centers';
+  practo.omnisearch.placeholderEtc = 'etc';
+
+</script>
+    <script>
+  var practo = practo||{};
+  practo.errormessage = {};
+  practo.errormessage.smsNotSent = 'Sorry, SMS could not be sent';
+  practo.errormessage.enterValidNumber = 'Enter valid number';
+  practo.errormessage.enterTenDigitNumber = 'Enter 10 digit number';
+ </script>          <script async-src="/js/ef1307f-543a0fd.js"></script>
+        
+    
+            <script async-src="/js/76a1a35-0b7ae2b.js"></script>
+    
+    <noscript>
+        <style>
+            @media screen and (min-width : 980px){
+                .home-title{
+                    margin-top: 100px;
+                }
+                .home-search{
+                    margin-bottom: 150px !important;
+                }
+            }
+            #seoInfoText{
+                cursor:default;
+            }
+            .searchFormHideState{
+                display:block;
+            }
+            #seoInfoText > p.head_text{
+                background-image:none;
+            }
+            .calendarDivs{
+                display: block;
+            }
+            .hideifnojs{
+                display:none !important;
+            }
+            .showifnojs{
+                display:block;
+            }
+        </style>
+    </noscript>
+
+    <script>
+        
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;i.addEventListener('load', function(){m.parentNode.insertBefore(a,m)});
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    
+    ga('create', 'UA-18841050-11', 'auto', {'name': 'practo'});
+    
+
+    ga('practo.require', 'displayfeatures');
+    ga('practo.send', 'pageview', gadimensions);
+
+(function (window){
+    // our code
+    window.addSokratiTracking = function (doctor_id, appointment_time){
+        _sokrati_registration(doctor_id, appointment_time);
+    }
+    var sokratiExecutionQueue = [];
+    window._sokrati_registration = function () {
+        sokratiExecutionQueue.push(arguments);
+    };
+
+    window.onSokratiLoad = function () {
+        sokratiExecutionQueue.forEach(function (item) {
+            _sokrati_registration.apply(null, item);
+        });
+    }
+})(window);
+
+(function() {
+
+    // sokrati code
+    var a = document.createElement('script');
+    a.type = 'text/javascript';
+    a.async = true;
+    a.src=('https:'==document.location.protocol?'https://':'http://cdn.')+'chuknu.sokrati.com/8799/tracker.js';
+    a.addEventListener('load', onSokratiLoad);
+    var s = document.getElementsByTagName('script')[0];
+    window.addEventListener('load', function(){
+        s.parentNode.insertBefore(a, s);
+    });
+})();
+
+// VWO Tracking code
+    var _vwo_code=(function(){
+    var account_id=149141,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    // DO NOT EDIT BELOW THIS LINE
+    f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{visibility:hidden !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+
+//mixpanel integration-- start
+
+(function(f, b) {
+    if (!b.__SV) {
+        var a, e, i, g;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function(a, e, d) {
+            function f(b, h) {
+                var a = h.split(".");
+                2 == a.length && (b = b[a[0]], h = a[1]);
+                b[h] = function() {
+                    b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }
+            var c = b;
+            "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+            c.people = c.people || [];
+            c.toString = function(b) {
+                var a = "mixpanel";
+                "mixpanel" !== d && (a += "." + d);
+                b || (a += " (stub)");
+                return a
+            };
+            c.people.toString = function() {
+                return c.toString(1) + ".people (stub)"
+            };
+            i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+            for (g = 0; g < i.length; g++) f(c, i[g]);
+            b._i.push([a, e, d])
+        };
+        b.__SV = 1.2;
+        a = f.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+        e = f.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(a, e)
+    }
+})(document, window.mixpanel || []);
+mixpanel.init("85d643d7bc71611832663cd683666848");
+//mixpanel integration-- end
+
+
+    //yahoo-tracker
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4019013"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+           !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];window.addEventListener('load', function(){n.parentNode.insertBefore(e,n)})};analytics.SNIPPET_VERSION="3.0.1";
+  analytics.load('ktT2bhuZOZ63MSCsefECsyOuOYIBlxMS');
+  }}();
+
+  var practoAnalytics = {
+    page : function(payload) {
+      payload = payload || "";
+      analytics.page(payload);
+    },
+    track : function(payload) {
+      analytics.track(payload.action, payload);
+    }
+  }
+
+  var pagePayload = "";
+  practoAnalytics.page(pagePayload);
+ 
+        
+        window.addEventListener("script-load", function(){
+            $(".searchResultsLoader p.gif-holder").html("<img alt='" + "loading" + "...' src='https://www.practo.com/bundles/practopractoapp/images/loader.gif'/>");
+        })
+
+                searchvars = {"inFrame":false,"countries":[{"name":"India","helpline_number":"+91 95 9090 8080","cities":["Bangalore","Hyderabad","Visakhapatnam","Vijayawada","Chandigarh","Raipur","Delhi","Ahmedabad","Surat","Vadodara","Panchkula","Faridabad","Gurgaon","Ernakulam","Thiruvananthapuram","Bhopal","Indore","Aurangabad","Mumbai","Thane","Nagpur","Nashik","Pune","Navi Mumbai","Puducherry","Ludhiana","Mohali","Jaipur","Chennai","Coimbatore","Agra","Lucknow","Noida","Ghaziabad","Meerut","Varanasi","Kolkata"],"topCities":["Bangalore","Mumbai","Delhi","Chennai","Kolkata","Pune","Hyderabad"],"defaultLocale":"en"},{"name":"Singapore","helpline_number":"+65 6714 6601","cities":["Singapore"],"topCities":["Singapore"],"defaultLocale":"en"},{"name":"Philippines","helpline_number":"+63 9271271962","cities":["Metro Manila","Batangas"],"topCities":["Metro Manila","Batangas"],"defaultLocale":"en"},{"name":"Indonesia","helpline_number":"+65 6714 6601","cities":["Jakarta"],"topCities":["Jakarta"],"defaultLocale":"id-id"}],"cities":["Mumbai","Bangalore","Delhi","Hyderabad","Chennai","Metro Manila","Pune","Singapore","Jakarta","Thane","Kolkata","Ahmedabad","Navi Mumbai","Gurgaon","Lucknow","Surat","Ghaziabad","Coimbatore","Noida","Jaipur","Nashik","Nagpur","Thiruvananthapuram","Bhopal","Indore","Ludhiana","Faridabad","Vadodara","Visakhapatnam","Ernakulam","Chandigarh","Patna","Agra","Meerut","Aurangabad","Vijayawada","Kuala Lumpur","Batangas","Varanasi","Mohali","Ranchi","Jodhpur","Raipur","Puducherry","Panchkula","Rio De Janeiro","Mexico Df","Allahabad","Kanpur Nagar","Mangalore","Kanchipuram","Madurai","Bhubaneswar","Rajkot","Mysore","Dehradun","Hubli","Guntur","Howrah","Bangalore Rural","Kolhapur","Amritsar","Vellore","Jalandhar","Jabalpur","Nellore","Ambala","Jamshedpur","Gandhinagar","Kota","South Goa","Gwalior","Solapur","North Goa","Warangal","Dhanbad","Guwahati","Erode","Ahmednagar","Chittoor","North 24 Parganas","Hooghly","Goalpara","Srinagar","Kozhikode","Tumkur","Salem","Kannur","Kakinada","Khammam","Bathinda","Patiala","West Godavari","Jalgaon","Hisar","Udaipur","Gulbarga","Belgaum","Alappuzha","Thrissur","Panipat","Nizamabad","Rajahmundry","Darjeeling","Thanjavur","Kurnool","Ujjain","Kollam","Kangra","Bharuch","Tirunelveli","Rangareddi","Nainital","Krishna","Bardhaman","Navsari","Jamnagar","Jammu","Anand","Wayanad","Udupi","Tirupur","Rohtak","Patan","Bhavnagar","Yamunanagar","Alwar","Nanded","Karimnagar","Dindigul","Cuddapah","Bhiwani","Anantapur","Satara","Raigad","Bareilly","Tiruchirappalli","Shimoga","Pathanamthitta","Haridwar","East Godavari","Dharwad","Ariyalur","Sonipat","Osmanabad","Nalgonda","Krishnagiri","Kottayam","Eluru","Davanagere","Sri Ganganagar","Parbhani","Moradabad","Mathura","Kapurthala","Cuddalore","Bilaspur","Vapi","Udham Singh Nagar","Sikar","Saharanpur","Rewari","Ratnagiri","Kasargod","Karnal","Cavite","Tiruvallur","Sangli","Pandavapura","Malappuram","Gorakhpur","East Medinipur","Amravati","Ajmer","Vizianagaram","Vidisha","Vaishali","Solan","Raichur","Nagercoil","Muzaffarpur","Mandya","Mahbubnagar","Lakhimpur","Kumbakonam","Jhajjar","East Khasi Hills","Cuttack","Akola","Adilabad","South 24 Parganas","Prakasam","Nawanshahr","Mahesana","Latur","Idukki","Gurdaspur","Ganjam","Faizabad","Bellary","Aligarh","Yavatmal","Sirsa","Sao Paulo","Pudukkottai","Porbandar","Muzaffarnagar","Gaya","Chickballapur","Chandrapur","Bikaner","Barpeta","Valsad","Saran","Samastipur","Nadia","Murshidabad","Muktsar","Kutch","Khargone","Junagadh","Hoshiarpur","Fatehabad","Durg","Dharmapuri","Darbhanga","Burhanpur","Buldhana","Bastar","Banas Kantha","Viluppuram","Una","Tinsukia","Sitapur","Sangrur","Sabar Kantha","Pratapgarh","Medak","Karaikal","Gokak","Dhule","Dhar","Dangs","Chhindwara","Bijapur","Beed","Afjalpur","Wardha","Thoothukudi","Tawang","Srikakulam","Sivaganga","Sindhudurg","Shimla","Shikaripur","Rewa","Palakkad","Narnaul","Namakkal","Munger","Kurukshetra","Korba","Karur","Jorhat","Jharsuguda","Jaunpur","Jalna","Haveri","Hassan","Hamirpur","Haliyal","Faridkot","Dohad","Chhatarpur","Bidar","Bharatpur","Bangarpet","Amreli","West Tripura","West Medinipur","Siwan","Sirohi","Shorapur","Sambalpur","Rohtas","Rampur","Ramanathapuram","Puttur","Papum Pare","Neemuch","Mandsaur","Malvan","Malur","Malda","Maharajganj","Kolar","Karwar","Karauli","Jhansi","Janjgir-champa","Jalpaiguri","Jajpur","Hazaribag","Hailakandi","Ghazipur","Firozabad","Fatehpur","Fatehgarh Sahib","Dholpur","Damoh","Cooch Behar","Chamba","Bijnor","Basti","Barwani","Andaman","Udhampur","Tiruvannamalai","Tiptur","Theni","Tapi","Surguja","Supaul","Sundergarh","Sullia","Sonbhadra","Singrauli","Siddapur","Shiggaon","Sheopur","Shahjahanpur","Sawai Madhopur","Sakleshpur","Rupnagar","Ratlam","Rajsamand","Rajnandgaon","Rajauri","Raebareli","Purnia","Pulwama","Perambalur","Pashchim Champaran","Panch Mahals","Pali","Nandurbar","Nagaon","Mudigere","Moga","Mirzapur","Mewat","Mayurbhanj","Marigaon","Mansa","Mandi","Malkangiri","Mahendragarh","Madhubani","Madhepura","Lakhisarai","Kumta","Kohima","Kheda","Khandwa","Kaushambi","Katni","Katihar","Kanyakumari","Kanker","Jind","Jhunjhunu","Jewargi","Imphal","Hiriyur","Hingoli","Hathras","Hardoi","Hanumangarh","Guna","Golaghat","Gadag","Ferozepur","Etah","East Sikkim","Dungarpur","Dhamtari","Dewas","Deoghar","Daman","Dadra And Nagar Haveli","Chatra","Chandauli","Challakere","Bulandshahr","Budaun","Bokaro","Birbhum","Bhilwara","Bhadravathi","Belur","Belthangady","Barabanki","Balrampur","Balangir","Bagepalli","Bagalkot","Araria","Aizawl"],"specializations":["Dentist","General Physician","Pediatrician","Orthopedist","Gynecologist\/obstetrician","Gynecologist","Diabetologist","Physiotherapist","General Surgeon","Cardiologist","Ophthalmologist\/ Eye Surgeon","Ophthalmologist","Homeopath","Gastroenterologist","Ayurveda","Urologist","Dermatologist\/cosmetologist","Ent\/ Otolaryngologist","Ear-nose-throat (ent) Specialist","Dermatologist","Orthodontist","Cosmetic\/plastic Surgeon","Oral And Maxillofacial Surgeon","Endodontist","Acupuncturist","Dental Surgeon","Neurologist","Anesthesiologist","Psychiatrist","Implantologist","Prosthodontist","Orthopedic Surgeon","Cosmetologist","Periodontist","Siddha","Obstetrician","Neurosurgeon","Pediatric Dentist","Radiologist","Cosmetic\/aesthetic Dentist","Saloon","Pulmonologist","Occupational Therapist","Laparoscopy","Spine Surgeon","Spa","Pediatric Surgeon","Spa Therapist","Infertility Specialist","Spine And Pain Specialist","Speech Therapist","Gastrointestinal Surgery","Clinical Physiotherapist","Oncologist","Nephrologist\/renal Specialist","Nephrologist","Vascular Surgeon","Psychologist","Dentofacial Orthopedist","Surgical Oncologist","Cardiothoracic Surgeon","Urogynecologist","Reproductive Endocrinologist (infertilty)","Orthopedic Physiotherapist","Paediatric Intensivist","Oncologist\/cancer Specialist","Family Physician","Yoga And Naturopathy","Consultant Physician","Internal Medicine","Sexologist","Bariatric Surgeon","Alternative Medicine","Veterinary Physician","Veterinarian","Dietitian\/nutritionist","Hair Transplant Surgeon","Head And Neck Surgeon","Rehab & Physical Medicine Specialist","Sports Medicine Surgeon","Sports And Musculoskeletal Physiotherapist","Andrologist","Audiologist","Allergist\/immunologist","Total Joint Surgeon","Veterinary Surgeon","Oral Medicine And Radiology","Clinical Psychologist","Obesity Specialist","Hand Surgeon","Wellness","Venereologist","Rheumatologist","Psychotherapist","Oral Pathologist","Neuro Physiotherapist","Pediatric Physiotherapist","Neonatalogist","Interventional Cardiologist","Endocrinologist","General Endocrinologist","Counselling Psychologist","Unani","Aesthetic Dermatology","Urological Surgeon","Pediatric Orthopedic Surgeon","Joint Replacement Surgeon","Sonologist","Preventive Dentistry","Beautician","Proctologist","Cardiovascular And Pulmonary Physiotherapist","Trichologist","Pathologist","General Pathologist","Pediatric Neurologist","Thoracic (chest) Surgeon","Cardiac Surgeon","Aesthetic Medicine","Surgeon","Pediatric Cardiologist","Gastroentrology Surgeon","Dermatosurgeon","Breast Surgery","Addiction Psychiatrist","Pain Management Specialist","Colorectal Surgeon","Radiation Oncologist","Immunodermatologist","Pediatric Urologist","Pediatric Endocrinologist","Optometrist","Hematologist","Endocrine Surgeon","Pediatric Dermatologist","Hepatology","Emergency & Critical Care","Embroyologist","Dermatopathologist","Sports Medicine Specialist","Sports Medicine Physician","Hiv Specialist","Hepato-biliary-pancreatic","Geriatrician","Somnologist (sleep Specialist)","Somnologist","Neuropsychiatrist","Neonatal Surgeon","Geriatric Physiotherapist","Geneticist","Educational Psychologist","Ultrasonologist","Pediatric Gastroenterologist","Neuropsychologist","Intestine Surgeon","Critical Care Medicine","Adolescent And Child Psychiatrist","Hypnotherapist","Toxicologist","Pediatric Pulmonologist","Preventive Medicine","Perinatologist","Pediatric Ot","Nuclear Medicine Physician","Geriatric Psychiatrist","Cardiothoracic And Vascular Surgeon","Neuroendocrinologist","Health Psychologist","Rhinologist","Pediatric Otolaryngologist","Otologist\/ Neurotologist","Emergency Medicine","Veterinary Toxicologist","Occupational Psychologist","Neurointerventional Surgery","Forensic Psychiatrist","Sports Nutritionist","Hematologic Oncologist","Geriatric Neurologist","Echocardiologist","Chronic Liver Specialist","Cardiac Electrophysiologist","Pediatric Rheumatologist","Gynecologic Oncologist","Electro Homoeopathy"],"form":{"city":"chennai","q":null,"locality":null},"locality_list":["Abhiramapuram","Adambakkam","Adyar","Agaram","Alandur","Alwarpet","Alwarthirunagar","Ambattur","Ambattur Industrial Estate","Aminjikarai","Anna Nagar","Anna Nagar East","Anna Nagar West","Arcot Road","Arumbakkam","Ashok Nagar","Avadi","Ayanambakkam","Ayanavaram","Beach Road","Besant Nagar","Broadway","Cathedral Road","Chamiers Road","Chepauk","Chetpet","Chinmaya Nagar","Chintadripet","Chitlapakkam","Choolai","Choolaimedu","Chromepet","CIT Nagar","ECR Road","Egmore","Ekkaduthangal","Ennore","Gandhi Nagar","George Town","Gerugambakkam","Gopalapuram","Gowrivakkam","Greams Road","Guindy","Guindy Industrial Estate","Harrington Road","Hasthinapuram","Jafferkhanpet","Jawahar Nagar","Kamaraj Nagar","Kanchipuram","Kandanchavadi","Karapakkam","Kasturba Nagar","Kattupakkam","Kelambakkam","Kilkattalai","Kilpauk","KK Nagar","Kodambakkam","Kodungaiyur","Kolathur","Korattur","Kottivakkam","Kotturpuram","Kovilambakkam","Kovur","Koyambedu","Kundrathur","Madambakkam","Madhavaram","Madipakkam","Maduravoyal","Mahalingapuram","Manali","Manapakkam","Mandaveli","Mangadu","Mannady","Medavakkam","Meenambakkam","Mettukuppam","Mettupalayam","Minjur","MKB Nagar","Mogappair","Mogappair East","Mogappair West","Montieth Road","Mount Road","MRC Nagar","Mugalivakkam","Mylapore","Nandambakkam","Nandanam","Nanganallur","Navalur Place","Neelankarai","Nelson Manickam Road","Nerkundram","Nesapakkam","Nolambur","Nungambakkam","Okkiyam Thuraipakkam","OMR Road","Padappai","Padi","Palavakkam","Pallavaram","Pallikaranai","Pammal","Panayur","Park Town","Parrys","Pattabiram","Pazavanthangal","Perambur","Periyamet","Periyar Nagar","Perumbakkam","Perungalathur","Perungudi","Pondy Bazaar","Poonamalle","Porur","Pozhichalur","Pudupakkam","Pudupet","Pulianthope","Purasawakkam","Puzhal","Radhakrishnan Salai","Raja Annamalai Puram","Rajakilpakkam","Ramapuram","Red Hills","Royapettah","Royapuram","Saidapet","Saligramam","Santhosapuram","Sembakkam","Shenoy Nagar","Sholinganallur","Sithalapakkam","Sowcarpet","St Thomas Mount","Sterling Road","T Nagar","Tambaram","Tambaram East","Tambaram West","Taramani","Teynampet","Tharamani","Thirumangalam","Thirumullaivoyal","Thiruvallur","Thiruvanmiyur","Thiruverkadu","Thiruvottiyur","Thoraipakkam","Thousand Lights","Tiruvottiyur","Tondiarpet","Triplicane","Vadapalani","Valasaravakkam","Vanagaram","Vanuvampet","Velachery","Vepery","Villivakkam","Virugambakkam","Vyasarpadi","Washermenpet","West Mambalam"],"searchfor":"specialization","normalizedForm":{"q":null,"locality":null,"city":"Chennai"},"topLocalities":["Anna Nagar","Thygaraya Nagar","Adyar","Egmore","Tambaram","Velacheri","Guindy","Nungambakkam","Ambattur","Mylapore","Porur","Vadapalani","Sholinganallur","Thiruvanmiyur","Avadi","Kodambakkam","Kilpauk","Koyambedu","Perambur","Perungudi"],"cityCountry":{"bangalore":"india","hyderabad":"india","visakhapatnam":"india","vijayawada":"india","chandigarh":"india","raipur":"india","delhi":"india","ahmedabad":"india","surat":"india","vadodara":"india","panchkula":"india","faridabad":"india","gurgaon":"india","ernakulam":"india","thiruvananthapuram":"india","bhopal":"india","indore":"india","aurangabad":"india","mumbai":"india","thane":"india","nagpur":"india","nashik":"india","pune":"india","navi mumbai":"india","puducherry":"india","ludhiana":"india","mohali":"india","jaipur":"india","chennai":"india","coimbatore":"india","agra":"india","lucknow":"india","noida":"india","ghaziabad":"india","meerut":"india","varanasi":"india","kolkata":"india","singapore":"singapore","metro manila":"philippines","batangas":"philippines","jakarta":"indonesia"},"practice_types":["diagnostic"],"countriesHash":{"india":{"name":"India","helpline_number":"+91 95 9090 8080","cities":["Bangalore","Hyderabad","Visakhapatnam","Vijayawada","Chandigarh","Raipur","Delhi","Ahmedabad","Surat","Vadodara","Panchkula","Faridabad","Gurgaon","Ernakulam","Thiruvananthapuram","Bhopal","Indore","Aurangabad","Mumbai","Thane","Nagpur","Nashik","Pune","Navi Mumbai","Puducherry","Ludhiana","Mohali","Jaipur","Chennai","Coimbatore","Agra","Lucknow","Noida","Ghaziabad","Meerut","Varanasi","Kolkata"],"topCities":["Bangalore","Mumbai","Delhi","Chennai","Kolkata","Pune","Hyderabad"],"defaultLocale":"en"},"singapore":{"name":"Singapore","helpline_number":"+65 6714 6601","cities":["Singapore"],"topCities":["Singapore"],"defaultLocale":"en"},"philippines":{"name":"Philippines","helpline_number":"+63 9271271962","cities":["Metro Manila","Batangas"],"topCities":["Metro Manila","Batangas"],"defaultLocale":"en"},"indonesia":{"name":"Indonesia","helpline_number":"+65 6714 6601","cities":["Jakarta"],"topCities":["Jakarta"],"defaultLocale":"id-id"}}}
+                        document.getElementById('locationInput').value = '';
+        document.getElementById('keywordsInput').value = '';
+    </script>
+
+
+        
+    
+                    
+        <script>
+            
+            if (typeof window.practo == "undefined" ){
+                window.practo = {
+                    "fabric" : {
+                        "labels" : {"patient":"Patient","doctor":"Doctor"}
+                    }
+                }
+            }
+            else {
+                if (typeof window.practo.fabric == "undefined"){
+                    window.practo.fabric = {
+                        "labels" : {"patient":"Patient","doctor":"Doctor"}
+                    };
+                }
+                else {
+                    window.practo.fabric.labels = {"patient":"Patient","doctor":"Doctor"};
+                }
+            }
+
+            
+        </script>
+        
+    
+    
+                                        <!-- Google Code for Remarketing Tag -->
+                <script type="text/javascript">
+                    /* <![CDATA[ */
+                    var google_conversion_id = 1007860816;
+                    var google_custom_params = window.google_tag_params;
+                    var google_remarketing_only = true;
+                    window.addEventListener('load', function(){
+                        var a = document.createElement('script');
+                        a.async=1;a.src='//www.googleadservices.com/pagead/conversion.js';
+                        var m = document.getElementsByTagName('script')[0];
+                        m.parentNode.insertBefore(a,m);
+                    });
+                    /* ]]> */
+                </script>
+                <noscript>
+                    <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007860816/?value=0&amp;guid=ON&amp;script=0"/>
+                    </div>
+                </noscript>
+                        
+    <script type="text/javascript">
+        var _paq = _paq || [];
+var padimensions = {};
+if (gadimensions == undefined) {
+
+  for (var i = 1; i <= 15; i++) {
+    padimensions["dimension" + i] = null;
+  }
+}
+
+if (gadimensions == undefined) {
+  _paq.push(['setCustomVariable', 1, 'gadimensions', JSON.stringify(padimensions), 'page']);
+} else {
+  _paq.push(['setCustomVariable', 1, 'gadimensions', JSON.stringify(gadimensions), 'page']);
+}
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tarkin.practo.com/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setSiteId', 1]);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+  g.defer=true; g.async=true; g.src=u+'piwik.js';
+  window.addEventListener('load', function(){
+    s.parentNode.insertBefore(g,s);
+  });
+})();
+    </script>
+    <noscript>
+        <p><img src="https://tarkin.practo.com/piwik.php?idsite=1"
+    style="border:0;" alt="" /></p>
+    </noscript>
+            <script id="_webengage_script_tag" type="text/javascript">
+  var _weq = _weq || {};
+  _weq['webengage.licenseCode'] = 'd3a495b9';
+  _weq['webengage.widgetVersion'] = "4.0";
+  window.addEventListener("load", function(){
+    var _we = document.createElement('script');
+    _we.type = 'text/javascript';
+    _we.async = true;
+    _we.src = (document.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
+    var _sNode = document.getElementById('_webengage_script_tag');
+    _sNode.parentNode.insertBefore(_we, _sNode);
+  });
+</script>
+        <!-- Must be loaded at the end of the page -->
+<script>
+    (function(window, document){
+        var ev = document.createEvent('Event');
+        ev.initEvent('script-load', true, true);
+        var scripts = document.querySelectorAll("script[async-src]");
+
+        var _loadScript = function(index){
+            if(index >= scripts.length){
+                window.dispatchEvent(ev);
+                return null;
+            }
+
+            var script = scripts[index];
+            var asyncSrc = script.getAttribute("async-src");
+            script.removeAttribute("async-src");
+            if(!asyncSrc){
+                throw Error("URL not provided for async loading");
+            }
+            var asyncScript = document.createElement("script");
+            asyncScript.src = asyncSrc;
+
+            asyncScript.onload = asyncScript.onerror = function(){
+                asyncScript.onload = asyncScript.onerror = null;
+                _loadScript(index+1);
+            };
+            if(script.parentNode){
+                script.parentNode.removeChild(script);
+            }
+            document.head.appendChild(asyncScript)
+        };
+
+        window.addEventListener('load', function(){
+            _loadScript(0);
+        });
+
+    })(window, document);
+</script>    <input type="hidden" id="tracker-constants" value='{
+		"googleadservice" : {
+			"default" : {
+				"id" : "960721207",
+				"label" : {
+					"vn" : "JgCMCMHB41wQt-KNygM",
+					"abs" : "OKo2CK74vFcQt-KNygM"
+				}
+			},
+			"singapore" : {
+				"id" : "957551904",
+				"label" : {
+					"vn" : "2KlYCNHhxlkQoKrMyAM",
+					"abs" : "pjxaCMz_w1kQoKrMyAM"
+				}
+			},
+			"metro-manila" : {
+				"id" : "952353750",
+				"label" : {
+					"vn" : "EEplCN7Xs1sQ1oePxgM",
+					"abs" : "VIz-CKbnnFsQ1oePxgM"
+				}
+			}
+		},
+		"bing_analytics" : {
+			"id" : {
+				"vn" : "4019014",
+				"abs" : "4019013"
+			}
+		},
+		"vizury_acc_id" : "VIZVRM3153"
+	}' />  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e66900166e","applicationID":"853593","transactionName":"b1wDZktSXkVRUhcNWFYWIkdKR19bH2ERBVRMVjFAWFBEWXFBEyZCVl0NV2ZbX1tV","queueTime":0,"applicationTime":100,"atts":"QxsAEANITUs=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>
